@@ -1,28 +1,36 @@
-const nombre = {
-    demand: ture,
+const name = {
+    demand: true,
     alias: 'n'
 }
 
-const matematicas = {
+const math = {
     demand: true,
     alias: 'm'
 }
 
-const ingles = {
+const arts = {
     demand: true,
-    alias: 'i'
+    alias: 'a'
 }
 
-const programacion ={
+const programming = {
     demand: true,
     alias: 'p'
 }
 
-const creacion ={
-    nombre, 
-    matematicas,
-    ingles,
-    programacion
+const creation = {
+    name,
+    math,
+    arts,
+    programming
 }
 
-const arg = require('yargs')
+const argv = require('yargs')
+    .command('create', 'Create a new student in my DB', creation)
+    .argv;
+
+module.exports = {
+    argv
+};
+
+console.log(creation);
