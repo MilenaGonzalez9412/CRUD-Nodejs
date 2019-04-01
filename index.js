@@ -21,6 +21,10 @@ switch (command) {
         functions.showStudent(argv.name);
         break
 
+    case 'ShowMath':
+        functions.showStudentsWinMath();
+        break
+
     default:
         console.log('You did not enter an existing action');
 }
