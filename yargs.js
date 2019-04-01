@@ -25,12 +25,16 @@ const creation = {
     programming
 }
 
+const showStudent = {
+    name
+}
+
 const argv = require('yargs')
-    .command('create', 'Create a new student in my DB', creation)
+    .command('Create', 'Create a new student in my DB', creation)
+    .command('List', 'Show the students')
+    .command('SearchStudent', 'Show the student to look', showStudent)
     .argv;
 
 module.exports = {
     argv
 };
-
-console.log(creation);

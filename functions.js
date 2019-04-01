@@ -12,13 +12,13 @@ const create = (student) => {
     };
 
     let duplicate = studentList.find(nom => nom.name == student.name);
-    if(!duplicate){
+    if (!duplicate) {
 
         studentList.push(st);
         console.log('Student List');
         console.log(studentList);
         save();
-    }else{
+    } else {
         console.log('There is already a student with that name');
     }
 
@@ -40,6 +40,34 @@ const save = () => {
     })
 }
 
+const show = () => {
+    toList();
+    console.log('Students')
+    studentList.forEach(student => {
+        console.log(student.name);
+        console.log('Notes: ');
+        console.log(' Maths ' + student.math);
+        console.log(' Arts ' + student.arts);
+        console.log(' Programming ' + student.programming);
+    });
+}
+
+const showStudent = (nam) => {
+    toList();
+    let student = studentList.find(search => search.name == nam);
+    if (!student) {
+        console.log('The student with the name to search does not exist');
+    } else {
+        console.log(student.name);
+        console.log('Notes: ');
+        console.log(' Maths ' + student.math);
+        console.log(' Arts ' + student.arts);
+        console.log(' Programming ' + student.programming);
+    }
+}
+
 module.exports = {
-    create
+    create,
+    show,
+    showStudent
 }

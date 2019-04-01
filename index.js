@@ -3,11 +3,24 @@ const {
 } = require('./yargs');
 const functions = require('./functions');
 
-console.log(argv);
-console.log('Position 0 ' + argv._[0]);
+// console.log(argv);
+// console.log('Position 0 ' + argv._[0]);
 
-let comando = argv._[0];
+let command = argv._[0];
 
-if (argv._[0] == 'create') {
-    functions.create(argv);
+switch (command) {
+    case 'Create':
+        functions.create(argv);
+        break
+
+    case 'List':
+        functions.show();
+        break
+
+    case 'SearchStudent':
+        functions.showStudent(argv.name);
+        break
+
+    default:
+        console.log('You did not enter an existing action');
 }
