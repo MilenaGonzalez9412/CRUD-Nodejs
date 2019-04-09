@@ -80,10 +80,21 @@ const showStudentsWinMath = () => {
         });
     }
 }
+const showAverage = (nam) =>{
+    toList();
+    let student = studentList.find(search => search.name == nam);
+    if(!student){
+        console.log('The student with the name to search does not exist');
+    }else{
+        console.log(student.name);
+        console.log('The average of the notes of the student is: ' +((student.math + student.arts + student.programming)/3))
+    }
+}
 
 module.exports = {
     create,
     show,
     showStudent,
-    showStudentsWinMath
+    showStudentsWinMath,
+    showAverage
 }
