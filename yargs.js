@@ -35,6 +35,8 @@ const argv = require('yargs')
     .command('List', 'Show the students')
     .command('SearchStudent', 'Show the student to look', student)
     .command('ShowAverage', 'Shows he average of the student´s notes.', student)
+    .command('ShowWinnersMath', 'Show the students who won math')
+    .command('ShowWinners', 'Show the students who have an average over 3.')
     .argv;
 
 module.exports = {
