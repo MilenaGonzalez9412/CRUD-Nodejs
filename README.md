@@ -14,22 +14,21 @@ Using yargs, you have options to make different actions like create a student, t
 
 <ul>
 <li>
-    * To Create a student: 'node index Create -n Name -m MathNote -a ArtsNote -p ProgrammingNote'
+     To Create a student: 'node index Create -n Name -m MathNote -a ArtsNote -p ProgrammingNote'
 </li>
 <li>
-    * To List the students: 'node index List
+     To List the students: 'node index List
 </li>
 <li>
-    * To Search a student by name: 'node index SearchStudent -n StudentName
+     To Search a student by name: 'node index SearchStudent -n StudentName
 </li>
 <li>
-    * To show the average of an student, given the name: 'node index ShowAverage -n StudentName 
+     To show the average of an student, given the name: 'node index ShowAverage -n StudentName 
 </li>
 <li>
-    * To show the students who won math: 'node index ShowWinnersMath'
+     To show the students who won math: 'node index ShowWinnersMath'
 </li>
 <li>
-    * To show the students who have an average greater than or equal to 3: 'node index ShowWinners'
+     To show the students who have an average greater than or equal to 3: 'node index ShowWinners'
 </li>
 </ul>
-
