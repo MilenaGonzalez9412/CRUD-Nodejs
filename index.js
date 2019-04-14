@@ -38,6 +38,14 @@ switch (command) {
     functions.showWinners();
     break;
 
+  case "Update":
+    functions.updateNote(argv.name, argv.theme, argv.calification);
+    break;
+
+  case "Delete":
+    functions.deleteStudent(argv.name);
+    break;
+
   default:
     console.log("You did not enter an existing action");
 }

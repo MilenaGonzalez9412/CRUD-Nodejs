@@ -52,7 +52,7 @@ const show = () => {
 
 const showStudent = nam => {
   toList();
-  let student = studentList.find(search => search.name == nam);
+  // let student = studentList.find(search => search.name == nam);
   if (!student) {
     console.log("The student with the name to search does not exist");
   } else {
@@ -104,8 +104,36 @@ const showWinners = () => {
   } else {
     console.log("The students who won the year are: ");
     winners.forEach(winner => {
-      console.log(winner.name + '   Average: ' + (winner.math + winner.arts + winner.programming) / 3);
+      console.log(
+        winner.name +
+          "   Average: " +
+          (winner.math + winner.arts + winner.programming) / 3
+      );
     });
+  }
+};
+
+const updateNote = (name, theme, calification) => {
+  toList();
+  let student = studentList.find(search => search.name == name);
+
+  if (!student) {
+    console.log("The student doesn't exist");
+  } else {
+    student[theme] = calification;
+    save();
+  }
+};
+
+const deleteStudent = name => {
+  toList();
+  let newList = studentList.filter(student => student.name != name);
+
+  if (newList.length == studentList.length) {
+    console.log("The student doesn't exist");
+  } else {
+    studentList = newList;
+    save();
   }
 };
 
@@ -115,5 +143,7 @@ module.exports = {
   showStudent,
   showStudentsWinMath,
   showAverage,
-  showWinners
+  showWinners,
+  updateNote,
+  deleteStudent
 };

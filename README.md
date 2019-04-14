@@ -31,4 +31,12 @@ Using yargs, you have options to make different actions like create a student, t
 <li>
      To show the students who have an average greater than or equal to 3: 'node index ShowWinners'
 </li>
+
+<li>
+     To update the calification of a student: 'node index Update -n StudentName -t Theme -c Calification'
+</li>
+
+<li>
+     To delete a student: 'node index Delete -n StudentName'
+</li>
 </ul>
